@@ -3,14 +3,14 @@ using SCB.Models.InfraBaseModels;
 
 namespace SCB.Models.InfraBaseModels
 {
-    public class LinkRolesMenus
+    public class LinkRolesMenu
     {
         [Key]
         public int Id { get; set; }
         public int RoleId { get; set; }
         public int MenuId { get; set; }
 
-        public virtual Menus Menus { get; set; }
-        public virtual Roles Roles { get; set; }
+        public virtual Menu Menus { get; set; }
+        public virtual Role Roles { get; set; }
     }
 }

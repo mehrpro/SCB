@@ -1,11 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SCB.Models.InfraBaseModels
 {
-    public class Companys
+    public class Company
     {
+        public Company()
+        {
+            Users= new HashSet<User>();
+        }
+
         [Key]
-        [Display(Name = " شناسه شرکت")]
+       [Display(Name = " شناسه شرکت")]
         public int CompanyId { get; set; }
         [Display(Name = "نام شرکت")]
         [Required(ErrorMessage = "وارد کردن {0} الزامی است")]
@@ -29,5 +36,9 @@ namespace SCB.Models.InfraBaseModels
         [Display(Name = "وب سایت")]
         [StringLength(250, ErrorMessage = "{0}  نباید بیشتر از 250 حرف باشد")]
         public string Website { get; set; }
+
+
+
+        public virtual ICollection<User> Users{ get; set; }
     }
 }

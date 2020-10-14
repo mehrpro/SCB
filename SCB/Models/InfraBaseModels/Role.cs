@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SCB.Models.InfraBaseModels
 {
-    public sealed class Roles
+    public sealed class Role
     {
-        public Roles()
+        public Role()
         {
-            Users = new HashSet<Users>();
-            LinkRolesMenus = new HashSet<LinkRolesMenus>();
+            Users = new HashSet<User>();
+            LinkRolesMenus = new HashSet<LinkRolesMenu>();
         }
         [Key]
         [Display(Name = "شناسه نقش")]
@@ -22,7 +22,7 @@ namespace SCB.Models.InfraBaseModels
         [StringLength(250,ErrorMessage = "{0}  نباید بیشتر از 250 حرف باشد")]
         public string Description { get; set; }
 
-        public ICollection<Users> Users { get; set; }
-        public ICollection<LinkRolesMenus> LinkRolesMenus { get; set; }
+        public ICollection<User> Users { get; set; }
+        public ICollection<LinkRolesMenu> LinkRolesMenus { get; set; }
     }
 }

@@ -5,19 +5,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SCB.Models.InfraBaseModels
 {
-    public class Menus
+    public class Menu
     {
-        public Menus()
+        public Menu()
         {
-            LinkRolesMenus = new HashSet<LinkRolesMenus>();
+            LinkRolesMenus = new HashSet<LinkRolesMenu>();
         }
         [Key]
-        public int Id { get; set; }
+        public int MenuId { get; set; }
         public string Name { get; set; }
         public string Icon { get; set; }
         public string Url { get; set; }
         public int ParentId { get; set; }
 
-        public virtual ICollection<LinkRolesMenus> LinkRolesMenus { get; set; }
+        public virtual ICollection<LinkRolesMenu> LinkRolesMenus { get; set; }
     }
 }

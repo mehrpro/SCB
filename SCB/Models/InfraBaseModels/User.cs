@@ -3,7 +3,7 @@
 
 namespace SCB.Models.InfraBaseModels
 {
-    public class Users
+    public class User
     {
 
 
@@ -24,7 +24,7 @@ namespace SCB.Models.InfraBaseModels
         public string Password { get; set; }
         [Display(Name = "شرکت")]
         [Required(ErrorMessage = "وارد کردن {0} الزامی است")]
-        public int CompanyId { get; set; }
+        public int? CompanyId { get; set; }
         [Display(Name = "نقش کاربری")]
         [Required(ErrorMessage = "وارد کردن {0} الزامی است")]
         public int? RoleId { get; set; }
@@ -38,7 +38,7 @@ namespace SCB.Models.InfraBaseModels
         public bool EmailSuccess { get; set; }
 
 
-        public virtual Roles Roles { get; set; }
-        public virtual Companys Companys { get; set; }
+        public virtual Role Role { get; set; }
+        public virtual Company Company { get; set; }
     }
 }
