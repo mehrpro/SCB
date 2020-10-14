@@ -69,12 +69,6 @@ namespace SCB.Controllers
                     string menuText = dr["Name"].ToString();
                     string icon = dr["Icon"].ToString();
 
-                        //< a >< i class="fa fa-home"></i> دبیرخانه<span class="fa fa-chevron-down"></span></a>
-                    //if (url == "#")
-                    //{
-                    //    string line = String.Format(@"<li><a href=""{0}""><i class=""{2}""></i> {1} <span class=""fa fa-chevron-down""></span></a>", url, menuText, icon);
-                    //    sb.Append(line);
-                    //}
                     if (url != "#")
                     {
                         string line = String.Format(@"<li><a href=""{0}""> {1}</a></li>", url, menuText, icon);
@@ -87,7 +81,7 @@ namespace SCB.Controllers
                     DataRow[] subMenu = table.Select(String.Format("ParentId = '{0}'", pid));
                     if (subMenu.Length > 0 && !pid.Equals(parentId))
                     {
-                        string line = String.Format(@"<li><a href=""#""><i class=""{0}""></i> {1} <span class=""fa fa - chevron - down""></span>
+                        string line = String.Format(@"<li><a href=""#""><i class=""{0}""></i> {1} <span class=""fa fa-chevron-down""></span>
                             </a><ul class=""nav child_menu"">", icon, menuText);
                         var subMenuBuilder = new StringBuilder();
                         sb.AppendLine(line);
