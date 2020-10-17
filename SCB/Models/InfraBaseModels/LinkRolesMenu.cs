@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using SCB.Models.InfraBaseModels;
 
 namespace SCB.Models.InfraBaseModels
 {

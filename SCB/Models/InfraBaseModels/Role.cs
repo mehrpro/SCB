@@ -11,9 +11,9 @@ namespace SCB.Models.InfraBaseModels
             LinkRolesMenus = new HashSet<LinkRolesMenu>();
         }
         [Key]
-        [Display(Name = "شناسه نقش")]
+        [Display(Name = "شناسه مجوز")]
         public int RoleId { get; set; }
-        [Display(Name = " عنوان نقش")]
+        [Display(Name = " عنوان مجوز")]
         [Required(ErrorMessage = "وارد کردن {0} الزامی است")]
         [StringLength(100,ErrorMessage = "{0}  نباید بیشتر از 100 حرف باشد")]
         public string Title { get; set; }
